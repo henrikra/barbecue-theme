@@ -1,0 +1,183 @@
+/* line 1, ../sass/_base.sass */
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+}
+
+/* line 1, ../sass/modules/_header.sass */
+.header {
+  background-image: url("../img/header-bg.jpg");
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+  text-align: center;
+}
+/* line 9, ../sass/modules/_header.sass */
+.header--content {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+/* line 17, ../sass/modules/_header.sass */
+.header--main-title {
+  font-size: 60px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+/* line 22, ../sass/modules/_header.sass */
+.header--sub-title {
+  color: #ed6b22;
+  font-size: 21px;
+}
+/* line 26, ../sass/modules/_header.sass */
+.header--down-btn {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -50px;
+  line-height: 48px;
+}
+/* line 39, ../sass/modules/_header.sass */
+.header--down-btn:hover {
+  cursor: pointer;
+  color: #ed6b22;
+  border-color: #ed6b22;
+}
+
+/* line 1, ../sass/modules/_navbar.sass */
+.navbar {
+  border-radius: 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+/* line 10, ../sass/modules/_navbar.sass */
+.navbar .navbar-header .navbar-brand {
+  height: auto;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  margin-top: -43px;
+}
+/* line 19, ../sass/modules/_navbar.sass */
+.navbar .navbar-nav li a {
+  color: #fff;
+  text-shadow: none;
+  font-weight: 500;
+  padding: 17px 0 10px;
+  margin: 64px 20px;
+  border-bottom: 2px solid transparent;
+}
+/* line 27, ../sass/modules/_navbar.sass */
+.navbar .navbar-nav li a:hover, .navbar .navbar-nav li a:focus {
+  border-bottom: 2px solid #ed6b22;
+  color: #fff;
+}
+/* line 32, ../sass/modules/_navbar.sass */
+.navbar .navbar-nav li:last-child a {
+  margin-right: 0;
+}
+/* line 36, ../sass/modules/_navbar.sass */
+.navbar .navbar-nav li.highlighted a {
+  border: 2px solid #fff;
+  padding: 15px 30px;
+}
+/* line 40, ../sass/modules/_navbar.sass */
+.navbar .navbar-nav li.highlighted a:hover {
+  border-color: #ed6b22;
+}
+
+/* line 1, ../sass/modules/_buttons.sass */
+.btn {
+  font-weight: 500;
+  text-transform: uppercase;
+  /* Padding ja font-size rikkovat Windows Phonessa layoutin */
+  padding: 15px 30px;
+  font-size: 16px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+}
+
+/* line 9, ../sass/modules/_buttons.sass */
+.cta-btn {
+  background: #ed6b22;
+  color: #fff;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  /* line 2, ../sass/_media-queries.sass */
+  .navbar {
+    background: rgba(49, 39, 42, 0.95);
+  }
+  /* line 4, ../sass/_media-queries.sass */
+  .navbar .navbar-collapse {
+    border: 0;
+  }
+  /* line 8, ../sass/_media-queries.sass */
+  .navbar .navbar-header .navbar-brand {
+    position: static;
+    margin: 0;
+  }
+  /* line 12, ../sass/_media-queries.sass */
+  .navbar .navbar-header .navbar-brand img {
+    padding: 8px 15px;
+    height: 55px;
+  }
+  /* line 16, ../sass/_media-queries.sass */
+  .navbar .navbar-header .navbar-toggle {
+    border: 0;
+    background: none;
+    padding-top: 12px;
+  }
+  /* line 21, ../sass/_media-queries.sass */
+  .navbar .navbar-header .navbar-toggle .icon-bar {
+    background-color: #ed6b22;
+  }
+  /* line 25, ../sass/_media-queries.sass */
+  .navbar .navbar-header .navbar-toggle.collapsed .icon-bar {
+    background-color: #fff;
+  }
+  /* line 30, ../sass/_media-queries.sass */
+  .navbar .navbar-nav li a {
+    padding: 10px 0px 10px;
+    margin: 15px 20px;
+  }
+  /* line 34, ../sass/_media-queries.sass */
+  .navbar .navbar-nav li a:hover {
+    border-bottom: 2px solid transparent;
+  }
+  /* line 38, ../sass/_media-queries.sass */
+  .navbar .navbar-nav li:last-child a {
+    margin: 15px 20px;
+  }
+  /* line 42, ../sass/_media-queries.sass */
+  .navbar .navbar-nav li.highlighted a {
+    border-color: transparent;
+  }
+  /* line 45, ../sass/_media-queries.sass */
+  .navbar .navbar-nav li.highlighted a:hover {
+    border-color: transparent;
+  }
+
+  /* line 48, ../sass/_media-queries.sass */
+  .header--sub-title {
+    font-size: 18px;
+  }
+  /* line 51, ../sass/_media-queries.sass */
+  .header--main-title {
+    font-size: 36px;
+    margin-top: 0;
+  }
+}

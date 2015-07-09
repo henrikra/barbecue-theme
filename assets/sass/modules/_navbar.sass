@@ -1,0 +1,41 @@
+.navbar
+	border-radius: 0
+	background: transparent
+	border: 0
+	border-bottom: 1px solid rgba(#fff, 0.3)
+
+	.navbar-header
+		
+
+		.navbar-brand
+			height: auto
+			padding: 0
+			position: absolute
+			top: 50%
+			margin-top: -43px
+
+	.navbar-nav
+		li
+			a
+				color: #fff
+				text-shadow: none
+				font-weight: 500
+				padding: 17px 0 10px
+				margin: 64px 20px
+				border-bottom: 2px solid transparent
+
+				&:hover, &:focus
+					border-bottom: 2px solid $main-color
+					color: #fff
+
+			&:last-child
+				a
+					margin-right: 0
+
+			&.highlighted
+				a
+					border: 2px solid #fff
+					padding: 15px 30px
+					
+					&:hover
+						border-color: $main-color
