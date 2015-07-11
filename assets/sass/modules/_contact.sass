@@ -1,0 +1,36 @@
+.contact
+	text-align: center
+	padding: 55px 0
+
+	&--title
+		font-family: $section-title-font
+		font-weight: 700
+		font-size: 28px
+		text-transform: uppercase
+		margin-top: 0
+		margin-bottom: 45px
+
+.contact-item
+	&--icon
+		font-size: 22px
+		color: $main-color
+		margin-bottom: 15px
+
+	&--title
+		text-transform: uppercase
+		font-weight: 500
+
+	&--content
+		a
+			color: $grey-text
+			text-decoration: none
+
+			&:hover
+				color: $main-color
+
+@media (max-width: 767px)
+	.contact
+		padding-bottom: 30px
+
+	.contact-item
+		margin-bottom: 30px

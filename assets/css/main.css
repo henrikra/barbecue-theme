@@ -233,12 +233,18 @@ p {
   }
 }
 section {
-  background: #2c2426;
   position: relative;
 }
 section.light-section {
   background: #fff;
   color: #5e5e5e;
+}
+section.dark-brown-section {
+  background: #2c2426;
+}
+section.light-brown-section {
+  background: #342a2e;
+  color: #d9d9d9;
 }
 
 .dark-bg-half {
@@ -330,6 +336,45 @@ section.light-section {
 
 @media (max-width: 991px) {
   .dish:last-child {
+    margin-bottom: 30px;
+  }
+}
+.contact {
+  text-align: center;
+  padding: 55px 0;
+}
+.contact--title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 45px;
+}
+
+.contact-item--icon {
+  font-size: 22px;
+  color: #ed6b22;
+  margin-bottom: 15px;
+}
+.contact-item--title {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.contact-item--content a {
+  color: #d9d9d9;
+  text-decoration: none;
+}
+.contact-item--content a:hover {
+  color: #ed6b22;
+}
+
+@media (max-width: 767px) {
+  .contact {
+    padding-bottom: 30px;
+  }
+
+  .contact-item {
     margin-bottom: 30px;
   }
 }
