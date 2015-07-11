@@ -28,9 +28,11 @@
 			text-transform: uppercase
 			font-weight: 500
 
-		& + .footer--link
-			margin-left: 24px
-			list-style-type: disc
+	&--link-separator
+		padding: 0px 12px
+		font-size: 6px
+		position: relative
+		top: -4px
 
 @media (max-width: 991px)
 	.footer
@@ -50,9 +52,8 @@
 		&--link
 			float: none
 
-			& + .footer--link
-				margin-left: 0
-				list-style-type: none
+		&--link-separator
+			display: none
 
 		&--copyright
 			float: none
