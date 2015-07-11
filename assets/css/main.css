@@ -1,10 +1,14 @@
-/* line 1, ../sass/_base.sass */
+@charset "UTF-8";
 body {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
+  color: #fff;
 }
 
-/* line 1, ../sass/modules/_header.sass */
+.col-small-padding {
+  padding: 0 10px;
+}
+
 .header {
   background-image: url("../img/header-bg.jpg");
   background-size: cover;
@@ -12,7 +16,6 @@ body {
   height: 100vh;
   text-align: center;
 }
-/* line 9, ../sass/modules/_header.sass */
 .header--content {
   position: absolute;
   top: 50%;
@@ -21,18 +24,15 @@ body {
   transform: translate(-50%, -50%);
   left: 50%;
 }
-/* line 17, ../sass/modules/_header.sass */
 .header--main-title {
   font-size: 60px;
   color: #fff;
   margin-bottom: 40px;
 }
-/* line 22, ../sass/modules/_header.sass */
 .header--sub-title {
   color: #ed6b22;
   font-size: 21px;
 }
-/* line 26, ../sass/modules/_header.sass */
 .header--down-btn {
   color: rgba(255, 255, 255, 0.4);
   font-size: 40px;
@@ -46,29 +46,26 @@ body {
   margin-left: -50px;
   line-height: 48px;
 }
-/* line 39, ../sass/modules/_header.sass */
 .header--down-btn:hover {
   cursor: pointer;
   color: #ed6b22;
   border-color: #ed6b22;
 }
 
-/* line 1, ../sass/modules/_navbar.sass */
 .navbar {
   border-radius: 0;
   background: transparent;
   border: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-/* line 10, ../sass/modules/_navbar.sass */
 .navbar .navbar-header .navbar-brand {
   height: auto;
   padding: 0;
   position: absolute;
   top: 50%;
   margin-top: -43px;
+  margin-left: 0px;
 }
-/* line 19, ../sass/modules/_navbar.sass */
 .navbar .navbar-nav li a {
   color: #fff;
   text-shadow: none;
@@ -77,30 +74,25 @@ body {
   margin: 64px 20px;
   border-bottom: 2px solid transparent;
 }
-/* line 27, ../sass/modules/_navbar.sass */
 .navbar .navbar-nav li a:hover, .navbar .navbar-nav li a:focus {
   border-bottom: 2px solid #ed6b22;
   color: #fff;
 }
-/* line 32, ../sass/modules/_navbar.sass */
 .navbar .navbar-nav li:last-child a {
-  margin-right: 0;
+  margin-right: 10px;
 }
-/* line 36, ../sass/modules/_navbar.sass */
 .navbar .navbar-nav li.highlighted a {
   border: 2px solid #fff;
   padding: 15px 30px;
 }
-/* line 40, ../sass/modules/_navbar.sass */
 .navbar .navbar-nav li.highlighted a:hover {
   border-color: #ed6b22;
 }
 
-/* line 1, ../sass/modules/_buttons.sass */
 .btn {
   font-weight: 500;
   text-transform: uppercase;
-  /* Padding ja font-size rikkovat Windows Phonessa layoutin */
+  /* Padding ja font-size rikkovat Windows Phonessa layoutin. Javascriptilla tunnistus kun windows phone niin pois käytöstä */
   padding: 15px 30px;
   font-size: 16px;
   -moz-border-radius: 0px;
@@ -109,75 +101,179 @@ body {
   border-radius: 0px;
 }
 
-/* line 9, ../sass/modules/_buttons.sass */
 .cta-btn {
   background: #ed6b22;
   color: #fff;
   border: 0;
 }
 
-@media (max-width: 768px) {
-  /* line 2, ../sass/_media-queries.sass */
+.intro {
+  background: #342a2e;
+  color: #d9d9d9;
+}
+.intro--article {
+  padding: 60px 40px 60px 0px;
+}
+.intro--image {
+  max-width: 160px;
+  height: 160px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background: url("../img/intro-feature.jpg");
+  background-position: center;
+  margin: 20px auto 0;
+}
+.intro--title {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 25px;
+}
+.intro--body p:last-child {
+  margin-bottom: 0;
+}
+
+.intro-info {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #2c2426;
+  margin: 10px 0;
+}
+.intro-info--column {
+  margin: 40px 0;
+}
+.intro-info--container {
+  min-height: 215px;
+  text-align: center;
+  padding: 50px 0;
+}
+.intro-info--content {
+  display: inline-block;
+  text-align: left;
+}
+.intro-info--icon-container {
+  font-size: 30px;
+  border: 1px solid #534a4c;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 65px;
+  margin: 0 auto 40px;
+}
+.intro-info--title {
+  color: #d9d9d9;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.intro-info--body {
+  color: #e1bda9;
+  margin-bottom: 15px;
+}
+.intro-info--body span {
+  display: block;
+}
+.intro-info--link a {
+  color: #f0894f;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.intro-info--column:first-child {
+  border-right: 1px solid #534a4c;
+}
+
+.intro-info--column:last-child {
+  border-left: 1px solid #534a4c;
+  margin-left: -1px;
+}
+
+@media (max-width: 1199px) {
+  .intro--image {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .intro--article {
+    padding: 40px 40px 40px 0px;
+  }
+}
+@media (max-width: 767px) {
+  .intro-info--link a i {
+    display: none;
+  }
+}
+section {
+  background: #2c2426;
+  position: relative;
+}
+
+.dark-bg-half {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 50%;
+  height: 100%;
+  background-color: #342a2e;
+}
+
+@media (max-width: 767px) {
   .navbar {
     background: rgba(49, 39, 42, 0.95);
   }
-  /* line 4, ../sass/_media-queries.sass */
   .navbar .navbar-collapse {
     border: 0;
   }
-  /* line 8, ../sass/_media-queries.sass */
   .navbar .navbar-header .navbar-brand {
     position: static;
     margin: 0;
   }
-  /* line 12, ../sass/_media-queries.sass */
   .navbar .navbar-header .navbar-brand img {
     padding: 8px 15px;
     height: 55px;
   }
-  /* line 16, ../sass/_media-queries.sass */
   .navbar .navbar-header .navbar-toggle {
     border: 0;
     background: none;
     padding-top: 12px;
   }
-  /* line 21, ../sass/_media-queries.sass */
   .navbar .navbar-header .navbar-toggle .icon-bar {
     background-color: #ed6b22;
   }
-  /* line 25, ../sass/_media-queries.sass */
   .navbar .navbar-header .navbar-toggle.collapsed .icon-bar {
     background-color: #fff;
   }
-  /* line 30, ../sass/_media-queries.sass */
   .navbar .navbar-nav li a {
     padding: 10px 0px 10px;
     margin: 15px 20px;
   }
-  /* line 34, ../sass/_media-queries.sass */
   .navbar .navbar-nav li a:hover {
     border-bottom: 2px solid transparent;
   }
-  /* line 38, ../sass/_media-queries.sass */
   .navbar .navbar-nav li:last-child a {
     margin: 15px 20px;
   }
-  /* line 42, ../sass/_media-queries.sass */
   .navbar .navbar-nav li.highlighted a {
     border-color: transparent;
   }
-  /* line 45, ../sass/_media-queries.sass */
   .navbar .navbar-nav li.highlighted a:hover {
     border-color: transparent;
   }
 
-  /* line 48, ../sass/_media-queries.sass */
   .header--sub-title {
     font-size: 18px;
   }
-  /* line 51, ../sass/_media-queries.sass */
   .header--main-title {
     font-size: 36px;
     margin-top: 0;
+  }
+
+  .dark-bg-half {
+    position: static;
   }
 }
