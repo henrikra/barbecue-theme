@@ -1,0 +1,53 @@
+.menu
+	padding: 70px 0
+	text-align: center
+	position: relative
+	overflow: hidden
+
+	&--title
+		font-size: 24px
+		font-family: $section-title-font
+		font-weight: 700
+		text-transform: uppercase
+		margin-bottom: 40px
+
+	&--categories
+		list-style: none
+		padding: 0
+		margin-bottom: 60px
+
+	&--category
+		display: inline-block
+		padding: 15px 35px
+		text-transform: uppercase
+		font-weight: 500
+		color: #878787
+
+		&.menu--category-active
+			color: $main-color
+			border: 2px solid $main-color
+
+		&:hover
+			color: $main-color
+			cursor: pointer
+
+	&--bg-image-left
+		position: absolute
+		left: -200px
+		max-width: 400px
+		height: auto
+		bottom: 0
+
+	&--bg-image-right
+		position: absolute
+		right: -200px
+		max-width: 400px
+		height: auto
+		top: 0
+
+@media (max-width: 991px)
+	.menu
+		padding: 35px 0
+
+		&--bg-image-left, &--bg-image-right
+			display: none
