@@ -266,7 +266,7 @@ section.light-brown-section {
   overflow: hidden;
 }
 .menu--title {
-  font-size: 24px;
+  font-size: 28px;
   font-family: "Oswald", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -313,12 +313,70 @@ section.light-brown-section {
   top: 0;
 }
 
-@media (max-width: 991px) {
+.mobile-menu-tabs {
+  display: inline-block;
+  text-transform: uppercase;
+  display: none;
+}
+.mobile-menu-tabs > a {
+  display: inline-block;
+  width: 100%;
+  padding: 15px 30px;
+  border: 2px solid #ed6b22;
+  font-weight: 700;
+  color: #ed6b22;
+  text-decoration: none;
+  font-size: 21px;
+}
+.mobile-menu-tabs.open {
+  border-color: #ed6b22;
+}
+.mobile-menu-tabs.open > a {
+  color: #ed6b22;
+}
+.mobile-menu-tabs .dropdown-menu {
+  width: 100%;
+  border: 2px solid #ed6b22;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  margin-top: -2px;
+  padding: 0;
+}
+.mobile-menu-tabs .dropdown-menu a {
+  color: #878787;
+  font-weight: 500;
+  padding: 10px 20px;
+  font-size: 15px;
+}
+.mobile-menu-tabs .dropdown-menu a:hover {
+  color: #ed6b22;
+  background: none;
+}
+.mobile-menu-tabs .dropdown-menu .active a {
+  background: #ed6b22;
+  color: #fff;
+}
+
+@media (max-width: 1199px) {
   .menu {
     padding: 35px 0;
   }
   .menu--bg-image-left, .menu--bg-image-right {
     display: none;
+  }
+}
+@media (max-width: 991px) {
+  .menu--category {
+    display: none;
+  }
+
+  .mobile-menu-tabs {
+    display: block;
+  }
+  .mobile-menu-tabs > a {
+    font-size: 18px;
   }
 }
 .dish {
@@ -387,8 +445,7 @@ section.light-brown-section {
     margin-bottom: 30px;
   }
 }
-.map {
-  background: url("../img/map.jpg");
+#map {
   height: 310px;
 }
 
