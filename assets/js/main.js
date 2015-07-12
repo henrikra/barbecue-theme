@@ -36,4 +36,10 @@
 	}
 
 	google.maps.event.addDomListener(window, 'load', initialize);
+
+	$(".dropdown-menu li a").click(function(){
+    $("#myTabDrop1").html($(this).text() + ' <i class="fa fa-chevron-down"></i>');
+ });
+
+
 })();
