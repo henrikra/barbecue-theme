@@ -279,18 +279,24 @@ section.light-brown-section {
 }
 .menu--category {
   display: inline-block;
-  padding: 15px 35px;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: #878787;
+  padding: 15px 30px;
+  border: 2px solid transparent;
 }
-.menu--category.menu--category-active {
+.menu--category a {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #878787;
+  text-decoration: none;
+  font-size: 21px;
+}
+.menu--category a:hover {
   color: #ed6b22;
+}
+.menu--category.active {
   border: 2px solid #ed6b22;
 }
-.menu--category:hover {
+.menu--category.active a {
   color: #ed6b22;
-  cursor: pointer;
 }
 .menu--bg-image-left {
   position: absolute;

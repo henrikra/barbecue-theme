@@ -18,18 +18,24 @@
 
 	&--category
 		display: inline-block
-		padding: 15px 35px
-		text-transform: uppercase
-		font-weight: 500
-		color: #878787
+		padding: 15px 30px
+		border: 2px solid transparent
 
-		&.menu--category-active
-			color: $main-color
+		a
+			text-transform: uppercase
+			font-weight: 700
+			color: #878787
+			text-decoration: none
+			font-size: 21px
+
+			&:hover
+				color: $main-color
+
+		&.active
 			border: 2px solid $main-color
 
-		&:hover
-			color: $main-color
-			cursor: pointer
+			a
+				color: $main-color
 
 	&--bg-image-left
 		position: absolute
