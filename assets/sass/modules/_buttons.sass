@@ -2,6 +2,7 @@
 	font-weight: 500
 	text-transform: uppercase
 	@include border-radius(0px)
+	text-shadow: none
 
 .cta-btn
 	background: $main-color
@@ -10,6 +11,19 @@
 	/* Layout hajoaa jos padding > 14px ja font-size > 14px Windows Phonella*/
 	padding: 15px 30px
 	font-size: 16px
+
+	&:hover, &:focus
+		background: lighten($main-color, 5%)
+		color: #fff
+
+		&:active
+			background: lighten($main-color, 5%)
+			color: #fff
+	
+	&:active
+		&:hover
+			background: darken($main-color, 5%)
+			color: #fff
 
 @media (max-width: 767px)
 	.cta-btn

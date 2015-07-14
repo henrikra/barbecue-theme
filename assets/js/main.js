@@ -59,4 +59,13 @@
 
   });
 
+	// Headerin nuoli, joka vie sivua alaspäin
+	var menuOffset = 85;
+	$(".header--down-btn").click(function(){
+  	$('html, body').animate({
+    	scrollTop: $('#intro').offset().top - menuOffset
+    }, 1000);
+ 	});
+  
+
 })();
