@@ -2,13 +2,13 @@
 	var map;
 	function initialize() {
 		var myStyles =[
-		    {
-		        featureType: "poi",
-		        elementType: "labels",
-		        stylers: [
-		              { visibility: "off" }
-		        ]
-		    }
+	    {
+        featureType: "poi",
+        elementType: "labels",
+        stylers: [
+          { visibility: "off" }
+        ]
+	    }
 		];
 
 		var isDraggable = $(document).width() > 480 ? true : false;
@@ -23,8 +23,8 @@
 	  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
 	  var marker = new google.maps.Marker({
-	      position: myLatlng,
-	      map: map
+    	position: myLatlng,
+      map: map
 	  });
 
 	  google.maps.event.addDomListener(window, "resize", function() {
@@ -38,8 +38,25 @@
 	google.maps.event.addDomListener(window, 'load', initialize);
 
 	$(".dropdown-menu li a").click(function(){
-    $("#myTabDrop1").html($(this).text() + ' <i class="fa fa-chevron-down"></i>');
- });
+  	$("#myTabDrop1").html($(this).text() + ' <i class="fa fa-chevron-down"></i>');
+ 	});
 
+
+	// Navbarin pienennys rullatessa alaspäin
+	$(window).scroll(function(){
+
+		var distanceFromTop = $(window).scrollTop(),
+				shrinkOn = 200,
+				navbar = $('.navbar');
+
+		if (distanceFromTop >= shrinkOn) {
+			navbar.addClass('smaller');
+		} else {
+			if (navbar.hasClass('smaller')) {
+				navbar.removeClass('smaller');
+			}
+		}
+
+  });
 
 })();
