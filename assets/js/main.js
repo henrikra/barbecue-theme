@@ -53,21 +53,23 @@
 
 
 	// Navbarin pienennys rullatessa alaspäin
-	$(window).scroll(function(){
+	if (location.pathname.substring(location.pathname.lastIndexOf("/") + 1) != 'lunch.html') {
+		$(window).scroll(function(){
 
-		var distanceFromTop = $(window).scrollTop(),
-				shrinkOn = 200,
-				navbar = $('.navbar');
+			var distanceFromTop = $(window).scrollTop(),
+					shrinkOn = 200,
+					navbar = $('.navbar');
 
-		if (distanceFromTop >= shrinkOn) {
-			navbar.addClass('smaller');
-		} else {
-			if (navbar.hasClass('smaller')) {
-				navbar.removeClass('smaller');
+			if (distanceFromTop >= shrinkOn) {
+				navbar.addClass('smaller');
+			} else {
+				if (navbar.hasClass('smaller')) {
+					navbar.removeClass('smaller');
+				}
 			}
-		}
 
-  });
+	  });
+  }
 
 	// Headerin nuoli, joka vie sivua alaspäin
 	var menuOffset = 85;

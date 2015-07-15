@@ -628,7 +628,7 @@ section.light-brown-section {
   }
 }
 .sub-page-header {
-  height: 800px;
+  height: 700px;
   background-image: url("../img/lunch-header-bg.jpg");
   background-size: cover;
   background-position: bottom;
@@ -636,13 +636,18 @@ section.light-brown-section {
 }
 .sub-page-header--title {
   font-size: 48px;
-  padding-top: 260px;
+  padding-top: 180px;
   margin: 0;
 }
 .sub-page-header--sub-title {
   font-size: 24px;
 }
 
+@media (min-width: 1200px) {
+  .sub-page-header {
+    background-attachment: fixed;
+  }
+}
 @media (max-width: 767px) {
   .sub-page-header {
     height: 200px;
