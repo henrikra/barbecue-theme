@@ -35,9 +35,7 @@
 
 	  if ($(document).width() < 480) {
 			google.maps.event.addListener(map, 'click', function() {
-				if (confirm('Haluatko siirtyä karttasovellukseen?')) {
-		  		window.open("https://www.google.fi/maps/place/Mannerheimv%C3%A4gen+111,+Helsingfors/data=!4m2!3m1!1s0x46920a206673e99d:0xf30481427277f72c?sa=X&ved=0CCIQ8gEwAGoVChMIk4qY473bxgIVJWdyCh0qJAV8","_blank");
-		  	}
+				$('#mobile-map-modal').modal('show');
 		  });
 		}
 

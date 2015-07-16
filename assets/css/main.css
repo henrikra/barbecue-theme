@@ -1,7 +1,6 @@
 body {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
-  color: #fff;
 }
 
 p {
@@ -289,6 +288,7 @@ p {
   text-align: center;
   line-height: 65px;
   margin: 0 auto 40px;
+  color: #fff;
 }
 .intro-info--title {
   color: #d9d9d9;
@@ -633,6 +633,7 @@ section.light-brown-section {
   background-size: cover;
   background-position: bottom;
   text-align: center;
+  color: #fff;
 }
 .sub-page-header--title {
   font-size: 48px;
