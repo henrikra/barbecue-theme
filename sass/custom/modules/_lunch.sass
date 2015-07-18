@@ -1,0 +1,82 @@
+.lunch
+	background: #f6f6f6
+	color: #5e5e5e
+
+	&--container
+		padding: 65px 0
+		margin-top: -400px
+
+	&--day
+		border: 1px solid #d3d3d3
+		border-top: 5px solid #d3d3d3
+		text-align: center
+		padding: 0
+		background: #fff
+		box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1)
+
+		& + .lunch--day
+			margin-left: -1px
+
+		&.current-day
+			border-color: $main-color
+			z-index: 2
+			transform: scale(1.07, 1.05)
+
+	&--today
+		color: $main-color
+		font-size: 14px
+		text-transform: uppercase
+		margin-bottom: 5px
+
+	&--day-date
+		font-weight: 500
+		font-size: 18px
+		padding: 20px 0
+		border-bottom: 1px solid #d3d3d3
+
+	&--day-content
+		padding: 0 30px
+
+	&--day-dish
+		padding: 25px 0
+
+		& + .lunch--day-dish
+			border-top: 1px solid #d3d3d3
+
+	&--day-dish-price
+		color: $main-color
+		font-weight: 700
+		font-size: 14px
+
+@media (max-width: 1199px)
+	.lunch
+		&--day-content
+			padding: 0px 20px
+
+@media (max-width: 991px)
+	.lunch
+		&--day
+			border-top-width: 1px
+
+			& + .lunch--day
+				margin-left: 0
+				margin-top: 10px
+
+			&.current-day
+				transform: none
+				border-width: 2px
+
+		&--day-dish
+			padding: 15px 0
+
+@media (max-width: 767px)
+	.lunch
+		&--container
+			margin-top: 0
+			padding: 0 0 10px
+
+		&--day
+			margin: 10px 10px 0
+
+			& + .lunch--day
+				margin: 10px 10px 0

@@ -1,0 +1,104 @@
+.intro
+	background: $dark-brown-bg-light
+	color: $grey-text
+
+	&--article
+		padding: 60px 40px 60px 0px
+
+	&--image
+		max-width: 160px
+		height: 160px
+		@include border-radius(50%)
+		border: 3px solid #fff
+		background: url("assets/img/intro-feature.jpg")
+		background-position: center
+		margin: 20px auto 0
+
+	&--title
+		font-family: $section-title-font
+		text-transform: uppercase
+		margin: 0 0 25px
+
+	&--body
+		p:last-child
+			margin-bottom: 0
+
+
+.intro-info
+	background: $dark-brown-bg
+
+	&--column
+		margin: 40px 0
+
+
+	&--container
+		min-height: 215px
+		text-align: center
+		padding: 50px 0
+
+	&--content
+		display: inline-block
+		text-align: left
+
+	&--icon-container
+		font-size: 30px
+		border: 1px solid $border-color
+		@include border-radius(50%)
+		width: 70px
+		height: 70px
+		text-align: center
+		line-height: 65px
+		margin: 0 auto 40px
+		color: #fff
+
+	&--title
+		color: $grey-text
+		font-weight: 500
+		text-transform: uppercase
+		margin-bottom: 5px
+
+	&--body
+		color: #e1bda9
+		margin-bottom: 15px
+
+		span
+			display: block
+
+	&--link
+		a
+			color: $main-color
+			text-transform: uppercase
+			font-weight: 500
+
+.intro-info--column:first-child
+	border-right: 1px solid $border-color
+
+.intro-info--column:last-child
+	border-left: 1px solid $border-color
+	margin-left: -1px
+
+@media (max-width: 1199px)
+	.intro
+		&--image
+			display: none
+
+@media (max-width: 991px)
+	.intro
+		&--article
+			padding: 40px 0
+
+@media (max-width:767px)
+	.intro-info
+		&--link
+			a
+				i
+					display: none
+
+		&--column
+			margin: 20px 0
+
+		&--container
+			padding: 25px 0
+
+		&--icon-container
+			margin-bottom: 25px

@@ -1,0 +1,115 @@
+.menu
+	padding: 70px 0 90px
+	text-align: center
+	position: relative
+	overflow: hidden
+
+	&--title
+		font-size: 28px
+		font-family: $section-title-font
+		font-weight: 700
+		text-transform: uppercase
+		margin-bottom: 40px
+
+	&--categories
+		list-style: none
+		padding: 0
+		margin-bottom: 60px
+
+	&--category
+		display: inline-block
+		padding: 15px 30px
+		border: 2px solid transparent
+
+		a
+			text-transform: uppercase
+			font-weight: 700
+			color: #878787
+			text-decoration: none
+			font-size: 21px
+
+			&:hover
+				color: $main-color
+
+		&.active
+			border: 2px solid $main-color
+
+			a
+				color: $main-color
+
+	&--bg-image-left
+		position: absolute
+		left: -200px
+		max-width: 400px
+		height: auto
+		bottom: 20px
+
+	&--bg-image-right
+		position: absolute
+		right: -200px
+		max-width: 400px
+		height: auto
+		top: 0
+
+.mobile-menu-tabs
+	display: inline-block
+	text-transform: uppercase
+	display: none
+
+	& > a
+		display: inline-block
+		width: 100%
+		padding: 15px 30px
+		border: 2px solid $main-color
+		font-weight: 700
+		color: $main-color
+		text-decoration: none
+		font-size: 21px
+
+	&.open
+		border-color: $main-color
+		& > a
+			color: $main-color
+
+	.dropdown-menu
+		width: 100%
+		border: 2px solid $main-color
+		@include border-radius(0)
+		margin-top: -2px
+		padding: 0
+
+		a
+			color: #878787
+			font-weight: 500
+			padding: 10px 20px
+			font-size: 15px
+
+			&:hover
+				color: $main-color
+				background: none
+		.active
+			a
+				background: $main-color
+				color: #fff
+
+@media (max-width: 1199px)
+	.menu
+		padding: 35px 0
+
+		&--bg-image-left, &--bg-image-right
+			display: none
+
+@media (max-width: 991px)
+	.menu
+
+		&--categories
+			margin-bottom: 40px
+
+		&--category
+			display: none	
+
+	.mobile-menu-tabs
+		display: block
+
+		& > a
+			font-size: 18px

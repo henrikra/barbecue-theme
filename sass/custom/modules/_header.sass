@@ -1,0 +1,53 @@
+.header
+	background: 
+		image: url("assets/img/header-bg.jpg")
+		size: cover
+		position: top
+	height: 100vh
+	text-align: center
+
+	&--content
+		position: absolute
+		top: 50%
+		-webkit-transform: translate(-50%, -50%)
+		-ms-transform: translate(-50%, -50%)
+		transform: translate(-50%, -50%)
+		left: 50%
+
+	&--main-title
+		font-size: 60px
+		color: #fff
+		margin-bottom: 40px
+
+	&--sub-title
+		color: $main-color
+		font-size: 21px
+
+	&--down-btn
+		color: rgba(#fff, 0.4)
+		font-size: 40px
+		border: 2px solid rgba(#fff, 0.2)
+		border-bottom: 0
+		width: 100px
+		height: 50px
+		position: absolute
+		bottom: 0
+		left: 50%
+		margin-left: -50px
+		line-height: 48px
+
+		&:hover
+			cursor: pointer
+			color: $main-color
+			border-color: $main-color
+
+@media (max-width: 767px)
+	.header
+		&--down-btn
+			display: none
+
+		&--main-title
+			margin-bottom: 20px
+
+		&--content
+			margin-top: 15px

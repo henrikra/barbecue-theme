@@ -1,0 +1,29 @@
+.dish
+	color: #5e5e5e
+	text-align: left
+	margin-bottom: 30px
+
+	&:last-child
+		margin-bottom: 130px
+
+	&--title
+		text-transform: uppercase
+		font-weight: 500
+		margin-bottom: 10px
+
+	&--desciption
+		font-size: 15px
+
+	&--price
+		float: right
+		color: $main-color
+		font-weight: 700
+
+
+@media (max-width: 991px)
+	.dish
+		&:last-child
+			margin-bottom: 30px
+
+		&--title
+			margin-bottom: 5px

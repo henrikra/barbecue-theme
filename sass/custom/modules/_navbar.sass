@@ -1,0 +1,113 @@
+.navbar
+	background: transparent
+	border-bottom-color: rgba(#fff, 0.3)
+	transition: all 400ms ease-in-out
+
+	.navbar-header
+		.navbar-brand
+			height: auto
+			padding: 0
+			position: absolute
+			top: 50%
+			margin-top: -43px
+			margin-left: 0px
+			transition: all 400ms ease-in-out
+
+			img
+				height: 86px
+				transition: all 400ms ease-in-out
+
+	.navbar-nav
+		li
+			a
+				color: #fff
+				text-shadow: none
+				font-weight: 500
+				padding: 17px 0 10px
+				margin: 64px 20px
+				border-bottom: 2px solid transparent
+				transition: margin 400ms ease-in-out
+				text-transform: uppercase
+
+				&:hover, &:focus
+					border-bottom: 2px solid $main-color
+					color: #fff
+
+			&:last-child
+				a
+					margin-right: 10px
+
+			&.highlighted
+				a
+					border: 2px solid #fff
+					padding: 15px 30px
+					
+					&:hover
+						border-color: $main-color
+
+			&.menu-item-active
+				a
+					color: $main-color
+					border-color: $main-color
+
+@media (min-width: 768px)
+	.navbar
+		&.smaller
+			background: rgba(#31272a, 0.95)
+			.navbar-nav
+				a
+					margin: 15px 20px
+
+			.navbar-header
+				.navbar-brand
+					margin-top: -25px
+
+					img
+						height: 50px
+
+
+@media (max-width: 767px)
+	.navbar
+		background: rgba(#31272a, 0.95)
+
+		.navbar-header
+			.navbar-brand
+				position: static
+				margin: 0
+
+				img
+					padding: 8px 15px
+					height: 55px
+
+			.navbar-toggle
+				border: 0
+				background: none
+				padding-top: 12px
+
+				.icon-bar
+					background-color: $main-color
+
+				&.collapsed
+					.icon-bar
+						background-color: #fff
+
+		.navbar-nav
+			li
+				a
+					padding: 10px 0px 10px
+					margin: 15px 20px
+
+					&:hover
+						border-bottom: 2px solid transparent
+
+				&:last-child
+					a
+						margin: 15px 20px
+
+				&.highlighted
+					a
+						border-color: transparent
+						padding: 10px 0
+
+						&:hover
+							border-color: transparent
