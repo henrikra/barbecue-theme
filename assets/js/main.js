@@ -51,7 +51,7 @@
 
 
 	// Navbarin pienennys rullatessa alaspäin
-	if (location.pathname.substring(location.pathname.lastIndexOf("/") + 1) != 'lunch.html') {
+	if (!$('.navbar').hasClass('smaller')) {
 		$(window).scroll(function(){
 
 			var distanceFromTop = $(window).scrollTop(),
