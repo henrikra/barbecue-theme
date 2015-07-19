@@ -1028,6 +1028,7 @@ section.light-brown-section {
   padding: 0;
   background: #fff;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 .lunch--day + .lunch--day {
   margin-left: -1px;
@@ -1097,6 +1098,30 @@ section.light-brown-section {
     margin: 10px 10px 0;
   }
 }
+.diet {
+  display: inline-block;
+}
+.diet--icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 28px;
+  background: #ddd;
+  border-radius: 50%;
+  border: 1px solid #939393;
+  font-size: 15px;
+  margin-right: 5px;
+}
+.diet--body {
+  display: inline-block;
+}
+.diet + .diet {
+  border-left: 1px solid #939393;
+  padding-left: 15px;
+  margin-left: 10px;
+}
+
 @media (max-width: 767px) {
   .header--sub-title {
     font-size: 18px;

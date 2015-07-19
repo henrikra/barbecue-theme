@@ -148,3 +148,45 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+/**
+ * Save post metadata when a post is saved.
+ *
+ * @param int $post_id The post ID.
+ * @param post $post The post object.
+ * @param bool $update Whether this is an existing post being updated or not.
+ */
+// Set lunch dish week number by dish date
+// TÄTÄ EI TODENNÄKÖISESTI TARVITSE. PIDETÄÄN VIELÄ VARMUUDEN VUOKSI
+function save_dish_week( $post_id, $post, $update ) {
+	/*
+	 * In production code, $slug should be set only once in the plugin,
+	 * preferably as a class property, rather than in each function that needs it.
+	 */
+	$slug = 'dish';
+
+	if ( $slug != $post->post_type ) {
+		return;
+	}
+
+	// - Update the post's metadata.
+
+	// Date format "2012-10-18"
+	$ddate = $_REQUEST['date'];
+	$date = new DateTime($ddate);
+	$week = $date->format("W");
+
+	if ( ! add_post_meta( $post_id, 'week', $week, true ) ) { 
+		update_post_meta ( $post_id, 'week', $week );
+	}
+}
+add_action( 'save_post', 'save_dish_week', 10, 3 );
+
+function isWeekend($date) {
+	return (date('N', strtotime($date)) >= 6);
+}
+
+function is_decimal( $val ) {
+  return is_numeric( $val ) && floor( $val ) != $val;
+}
