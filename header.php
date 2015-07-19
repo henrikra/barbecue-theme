@@ -38,7 +38,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand pull-left" href="#">
+	      <a class="navbar-brand pull-left" href="<?php echo get_permalink( get_page_by_path('barbecue-home-page')); ?>">
 	      	<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" alt="Site logo">
 	      </a>
 	    </div>

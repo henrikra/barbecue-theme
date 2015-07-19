@@ -12,12 +12,14 @@
 <?php wp_footer(); ?>
 <footer class="footer">
 	<div class="container">
-		<a href="index.html"><img class="footer--logo" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" alt="Site logo"></a>
+		<a href="<?php echo get_permalink( get_page_by_path('barbecue-home-page')); ?>">
+			<img class="footer--logo" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" alt="Site logo">
+		</a>
 		<ul class="footer--links">
 			<li class="footer--link"><a href="">Menu</a><i class="fa fa-circle footer--link-separator"></i></li>
 			<li class="footer--link"><a href="">Uutiset</a><i class="fa fa-circle footer--link-separator"></i></li>
 			<li class="footer--link"><a href="">Yhteystiedot</a><i class="fa fa-circle footer--link-separator"></i></li>
-			<li class="footer--link"><a href="lunch.html">Lounas</a></li>
+			<li class="footer--link"><a href="<?php echo get_permalink( get_page_by_path('barbecue-lunch')); ?>">Lounas</a></li>
 			<div class="clearfix"></div>
 		</ul>
 		<span class="footer--copyright">&copy; 2015 Restaurant Barbecue. All Rights Reserved</span>

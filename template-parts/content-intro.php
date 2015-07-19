@@ -34,7 +34,7 @@
 										<span>Hinta 8 €</span>
 									</div>
 									<div class="intro-info--link">
-										<a href="lunch.html">Lounas <i class="fa fa-arrow-circle-right"></i></a>
+										<a href="<?php echo get_permalink( get_page_by_path('barbecue-lunch')); ?>">Lounas <i class="fa fa-arrow-circle-right"></i></a>
 									</div>
 								</div>
 							</div>
