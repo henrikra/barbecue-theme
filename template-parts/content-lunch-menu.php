@@ -38,9 +38,9 @@
 							)
 						));
 					?>
-					<div class="col-md-1-5 lunch--day <?php echo $currentDay ==  $loopWeekday ? 'current-day' : ''; ?>">
+					<div class="col-md-1-5 lunch--day <?php echo $currentDay->format('j.n.Y') ==  $loopWeekday->format('j.n.Y') ? 'current-day' : ''; ?>">
 						<div class="lunch--day-date">
-							<?php if ($currentDay ==  $loopWeekday) : ?>
+							<?php if ($currentDay->format('j.n.Y') ==  $loopWeekday->format('j.n.Y')) : ?>
 								<div class="lunch--today">Tänään</div>
 							<?php endif; ?>
 							<?php echo ucfirst($finnish_weekdays[$loopWeekday->format('l')]) . ' ' . $loopWeekday->format('j.n.Y'); ?>
@@ -48,9 +48,21 @@
 						<div class="lunch--day-content">
 						<?php if ($loop->have_posts()) : ?>
 							<?php while ($loop->have_posts()) : $loop->the_post(); ?>
-								<div class="lunch--day-dish">
-									<div class="lunch--day-dish-title"><?php the_title(); ?></div>
-									<div class="lunch--day-dish-price">
+								<div class="lunch-dish">
+									<?php
+										$diets = get_field('diets');
+										$dishDiets = '';
+										if (!empty($diets)) {
+											$dishDiets .= ' (';
+											foreach ($diets as $key => $value) { 
+												$dishDiets .= $value . ', ';
+											};
+											$dishDiets = substr($dishDiets, 0, -2);
+											$dishDiets .= ')';;
+										}
+									?>
+									<div class="lunch-dish--title"><?php the_title(); ?> <span class="lunch-dish--diets"><?php echo $dishDiets; ?></span></div>
+									<div class="lunch-dish--price">
 										<?php echo is_decimal(get_field('price')) ? number_format((float)get_field('price'), 2, ',', '') : the_field('price'); ?> €
 									</div>
 								</div>
@@ -60,29 +72,43 @@
 					</div>
 				<?php endfor; ?>
 			</div>
-			<div class="diet">
-				<div class="diet--icon">vl</div>
-				<div class="diet--body">Vähälaktoosinen</div>
-			</div>
-			<div class="diet">
-				<div class="diet--icon">m</div>
-				<div class="diet--body">Maidoton</div>
-			</div>
-			<div class="diet">
-				<div class="diet--icon">k</div>
-				<div class="diet--body">Kasvissyöjät</div>
-			</div>
-			<div class="diet">
-				<div class="diet--icon">l</div>
-				<div class="diet--body">Laktoositon</div>
-			</div>
-			<div class="diet">
-				<div class="diet--icon">g</div>
-				<div class="diet--body">Gluteeniton</div>
-			</div>
-			<div class="diet">
-				<div class="diet--icon">Ve</div>
-				<div class="diet--body">Vegaani</div>
+			<div class="row lunch--info">
+				<div class="col-lg-4 col-md-5 col-md-push-7 col-lg-push-8">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="diet">
+								<div class="diet--icon">vl</div>
+								<div class="diet--body">Vähälaktoosinen</div>
+							</div>
+							<div class="diet">
+								<div class="diet--icon">m</div>
+								<div class="diet--body">Maidoton</div>
+							</div>
+							<div class="diet">
+								<div class="diet--icon">k</div>
+								<div class="diet--body">Kasvissyöjät</div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="diet">
+								<div class="diet--icon">l</div>
+								<div class="diet--body">Laktoositon</div>
+							</div>
+							<div class="diet">
+								<div class="diet--icon">g</div>
+								<div class="diet--body">Gluteeniton</div>
+							</div>
+							<div class="diet">
+								<div class="diet--icon">ve</div>
+								<div class="diet--body">Vegaani</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8 col-md-7 col-md-pull-5 col-lg-pull-4">
+					<h3 class="lunch--info-title">Lorem ipsum dolor sit amet</h3>
+					<div class="lunch--info-body">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident </div>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -1,22 +1,28 @@
 .diet
-	display: inline-block	
 
 	&--icon
 		display: inline-block
-		width: 30px
-		height: 30px
+		width: 25px
+		height: 25px
 		text-align: center
-		line-height: 28px
-		background: #ddd
+		line-height: 23px
+		background: #fff
 		border-radius: 50%
-		border: 1px solid #939393
-		font-size: 15px
+		border: 1px solid $main-color
+		font-size: 14px
 		margin-right: 5px
 
 	&--body
 		display: inline-block
 
 	& + .diet
-		border-left: 1px solid #939393
-		padding-left: 15px
-		margin-left: 10px
+		margin-top: 10px
+
+@media (max-width: 991px)
+	.diet
+		margin-top: 25px
+
+@media (max-width: 767px)
+	.col-sm-6 + .col-sm-6
+		.diet
+			margin-top: 10px

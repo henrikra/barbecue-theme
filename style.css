@@ -697,6 +697,12 @@ p {
 section {
   position: relative;
 }
+section h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
 section.light-section {
   background: #fff;
   color: #5e5e5e;
@@ -970,6 +976,7 @@ section.light-brown-section {
   }
   .footer--link {
     float: none;
+    padding: 5px 0;
   }
   .footer--link-separator {
     display: none;
@@ -983,6 +990,7 @@ section.light-brown-section {
   background-image: url("assets/img/lunch-header-bg.jpg");
   background-size: cover;
   background-position: bottom;
+  background-repeat: no-repeat;
   text-align: center;
   color: #fff;
 }
@@ -998,6 +1006,7 @@ section.light-brown-section {
 @media (min-width: 1200px) {
   .sub-page-header {
     background-attachment: fixed;
+    background-position: center -235px;
   }
 }
 @media (max-width: 767px) {
@@ -1027,7 +1036,6 @@ section.light-brown-section {
   padding: 0;
   background: #fff;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
 }
 .lunch--day + .lunch--day {
   margin-left: -1px;
@@ -1052,16 +1060,13 @@ section.light-brown-section {
 .lunch--day-content {
   padding: 0 30px;
 }
-.lunch--day-dish {
-  padding: 25px 0;
+.lunch--info {
+  margin-top: 35px;
 }
-.lunch--day-dish + .lunch--day-dish {
-  border-top: 1px solid #d3d3d3;
-}
-.lunch--day-dish-price {
-  color: #ed6b22;
-  font-weight: 700;
-  font-size: 14px;
+.lunch--info-title {
+  font-weight: 400;
+  font-size: 21px;
+  margin-top: 0;
 }
 
 @media (max-width: 1199px) {
@@ -1081,14 +1086,17 @@ section.light-brown-section {
     transform: none;
     border-width: 2px;
   }
-  .lunch--day-dish {
-    padding: 15px 0;
+  .lunch--info-title {
+    margin-top: 30px;
+  }
+  .lunch--info {
+    margin-top: 10px;
   }
 }
 @media (max-width: 767px) {
   .lunch--container {
     margin-top: 0;
-    padding: 0 0 10px;
+    padding: 0 0 30px;
   }
   .lunch--day {
     margin: 10px 10px 0;
@@ -1097,30 +1105,124 @@ section.light-brown-section {
     margin: 10px 10px 0;
   }
 }
-.diet {
-  display: inline-block;
-}
 .diet--icon {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   text-align: center;
-  line-height: 28px;
-  background: #ddd;
+  line-height: 23px;
+  background: #fff;
   border-radius: 50%;
-  border: 1px solid #939393;
-  font-size: 15px;
+  border: 1px solid #ed6b22;
+  font-size: 14px;
   margin-right: 5px;
 }
 .diet--body {
   display: inline-block;
 }
 .diet + .diet {
-  border-left: 1px solid #939393;
-  padding-left: 15px;
-  margin-left: 10px;
+  margin-top: 10px;
 }
 
+@media (max-width: 991px) {
+  .diet {
+    margin-top: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .col-sm-6 + .col-sm-6 .diet {
+    margin-top: 10px;
+  }
+}
+.news {
+  background: url("assets/img/news-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.news--title {
+  color: #fff;
+  margin-bottom: 40px;
+}
+.news--container {
+  padding: 70px 0 80px;
+}
+
+@media (max-width: 767px) {
+  .news--container {
+    padding: 35px 0;
+  }
+}
+.article {
+  background: #fff;
+  padding: 70px 45px 30px;
+  color: #5e5e5e;
+  position: relative;
+}
+.article--title {
+  font-size: 21px;
+  margin: 0 0 15px;
+  font-weight: 400;
+}
+.article--title a {
+  color: #5e5e5e;
+}
+.article--title a:hover {
+  color: #ed6b22;
+  text-decoration: none;
+}
+.article--divider {
+  border-color: #d3d3d3;
+}
+.article--read-more {
+  color: #ed6b22;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.article--read-more:hover {
+  color: #ed6b22;
+}
+.article--date {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #ed6b22;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: 500;
+}
+.article + .article {
+  margin-top: 30px;
+}
+
+@media (max-width: 767px) {
+  .article {
+    padding: 60px 35px 20px;
+  }
+  .article + .article {
+    margin-top: 15px;
+  }
+}
+.lunch-dish {
+  padding: 25px 0;
+}
+.lunch-dish + .lunch-dish {
+  border-top: 1px solid #d3d3d3;
+}
+.lunch-dish--price {
+  color: #ed6b22;
+  font-weight: 700;
+  font-size: 14px;
+}
+.lunch-dish--diets {
+  font-size: 14px;
+  color: #aaa;
+}
+
+@media (max-width: 991px) {
+  .lunch-dish {
+    padding: 15px 0;
+  }
+}
 @media (max-width: 767px) {
   .header--sub-title {
     font-size: 18px;
