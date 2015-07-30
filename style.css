@@ -1141,10 +1141,13 @@ section.light-brown-section {
 }
 .news--title {
   color: #fff;
-  margin-bottom: 40px;
+  margin: 0 0 40px;
 }
 .news--container {
-  padding: 70px 0 80px;
+  padding: 70px 0;
+}
+.news.single-page {
+  background: #f6f6f6;
 }
 
 @media (max-width: 767px) {
@@ -1223,6 +1226,78 @@ section.light-brown-section {
     padding: 15px 0;
   }
 }
+.small-header {
+  background: url("assets/img/lunch-header-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  text-align: center;
+  color: #fff;
+}
+.small-header--title {
+  font-size: 48px;
+  padding-top: 160px;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .small-header {
+    height: 200px;
+  }
+  .small-header--title {
+    padding-top: 95px;
+    font-size: 36px;
+  }
+}
+.reservation {
+  text-align: center;
+  padding: 60px 0;
+  color: #5e5e5e;
+  background: #f6f6f6;
+}
+.reservation--title {
+  color: #5e5e5e;
+  margin: 0 0 25px;
+}
+.reservation--form-panel {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  border-color: #d3d3d3;
+  margin-top: 25px;
+  text-align: left;
+}
+.reservation--form-body {
+  padding: 30px;
+}
+
+.form-group label {
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  color: #5e5e5e;
+}
+.form-group input, .form-group textarea {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  box-shadow: none;
+  border: 2px solid #dfdfdf;
+}
+.form-group input:focus, .form-group textarea:focus {
+  border-color: #ed6b22;
+  box-shadow: none;
+}
+.form-group input {
+  height: 50px;
+}
+
+.required {
+  color: #ed6b22;
+}
+
 @media (max-width: 767px) {
   .header--sub-title {
     font-size: 18px;

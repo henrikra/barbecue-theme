@@ -1,0 +1,22 @@
+.form-group
+	label
+		text-transform: uppercase
+		font-family: 'Ubuntu', sans-serif
+		font-weight: 500
+		color: #5e5e5e
+
+
+	input, textarea
+		@include border-radius(3px)
+		box-shadow: none
+		border: 2px solid #dfdfdf
+
+		&:focus
+			border-color: $main-color
+			box-shadow: none
+
+	input
+		height: 50px
+
+.required
+	color: $main-color
