@@ -7,7 +7,7 @@
 get_header(); ?>
 
 
-<header class="small-header">
+<header class="small-header reservation-header">
 	<h1 class="small-header--title">Varaa pöytä</h1>
 </header>
 

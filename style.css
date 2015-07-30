@@ -1239,6 +1239,12 @@ section.light-brown-section {
   padding-top: 160px;
   margin: 0;
 }
+.small-header.reservation-header {
+  background: url("assets/img/news-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 30%;
+}
 
 @media (max-width: 767px) {
   .small-header {
@@ -1272,6 +1278,11 @@ section.light-brown-section {
   padding: 30px;
 }
 
+@media (max-width: 767px) {
+  .reservation--form-body {
+    padding: 15px;
+  }
+}
 .form-group label {
   text-transform: uppercase;
   font-family: "Ubuntu", sans-serif;
