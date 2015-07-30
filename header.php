@@ -29,7 +29,7 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'barbecue' ); ?></a>
 
-	<nav class="navbar navbar-default navbar-fixed-top <?php echo is_page('Barbecue Home Page') ? '' : 'smaller'; ?>">
+	<nav class="navbar navbar-default navbar-fixed-top <?php echo is_page('Barbecue Home') ? '' : 'smaller'; ?>">
 	  <div class="container">
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">

@@ -2,7 +2,9 @@
 	<img class="menu--bg-image-left" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/pihvi2.jpg" alt="Beef 1">
 	<img class="menu--bg-image-right" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/pihvi.jpg" alt="Beef 2">
 	<div class="container">
-			<h2 class="menu--title">Menu</h2>
+			<?php if( is_page('barbecue-home-page')) : ?>
+				<h2 class="menu--title">Menu</h2>
+			<?php endif; ?>
 			<ul class="menu--categories" role="tablist">
 				<li class="menu--category"><a href="#appetizers" role="tab" data-toggle="tab">Alkuruoat</a></li>
 				<li class="menu--category active"><a href="#main-dishes" role="tab" data-toggle="tab">Pääruoat</a></li>
