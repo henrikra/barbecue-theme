@@ -29,16 +29,16 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'barbecue' ); ?></a>
 
-	<nav class="navbar navbar-default navbar-fixed-top <?php echo is_page('Barbecue Home') ? '' : 'smaller'; ?>">
+	<nav class="navbar navbar-default navbar-fixed-top <?php echo is_front_page() ? '' : 'smaller'; ?>">
 	  <div class="container">
 	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsing-menu" aria-expanded="false">
 	        <span class="sr-only">Toggle navigation</span>
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand pull-left" href="<?php echo get_permalink( get_page_by_path('barbecue-home-page')); ?>">
+	      <a class="navbar-brand pull-left" href="<?php echo get_home_url(); ?>">
 	      	<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" alt="Site logo">
 	      </a>
 	    </div>
@@ -48,6 +48,7 @@
 	    	'theme_location' => 'primary',
 	    	'container' => 'div',
 	    	'container_class' => 'navbar-collapse collapse',
+	    	'container_id' => 'collapsing-menu',
 	    	'menu_class' => 'nav navbar-nav navbar-right'
 	    ));
 	    ?>

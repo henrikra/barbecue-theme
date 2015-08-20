@@ -1,4 +1,4 @@
-.reservation
+.reservation-form
 	text-align: center
 	padding: 60px 0
 	color: #5e5e5e
@@ -8,17 +8,63 @@
 		color: #5e5e5e
 		margin: 0 0 25px
 
-	&--form-panel
+	&--panel
 		@include border-radius(0)
 		border-color: #d3d3d3
 		margin-top: 25px
-		text-align: left
 
-
-	&--form-body
+	&--body
 		padding: 30px
 
-@media (max-width: 767px)
+.rtb-booking-form
+	position: relative
+
+	.reservation legend, .contact legend, .add-message
+		display: none
+
+	.reservation, .contact
+		margin: 0
+		padding: 0
+		width: 50%
+		float: left
+
+		.rtb-text, .rtb-select
+			margin-top: $input-margin
+		.date, .name
+			margin-top: 0
+
 	.reservation
-		&--form-body
-			padding: 15px
+		padding-right: 15px
+
+	.contact
+		padding-left: 15px
+
+		.message
+			position: absolute
+			left: 0
+			top: auto
+			width: 100%
+			margin-top: $input-margin
+
+	button
+		@extend .cta-btn, .btn
+		margin-top: 175px
+
+@media (max-width: 767px)
+	.rtb-booking-form
+		.reservation, .contact
+			width: 100%
+			float: none
+
+		.reservation, .contact
+			padding: 0
+
+			.rtb-text, .rtb-select, .rtb-textarea
+				margin-top: $input-margin-mob
+
+			.date
+				margin-top: 0
+
+	.reservation-form
+		&--body
+			padding: 15px 15px 40px

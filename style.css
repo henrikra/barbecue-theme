@@ -548,7 +548,7 @@ p {
     border-color: transparent;
   }
 }
-.btn {
+.btn, .rtb-booking-form button {
   font-weight: 500;
   text-transform: uppercase;
   -moz-border-radius: 0px;
@@ -558,7 +558,7 @@ p {
   text-shadow: none;
 }
 
-.cta-btn {
+.cta-btn, .rtb-booking-form button {
   background: #ed6b22;
   color: #fff;
   border: 0;
@@ -566,21 +566,21 @@ p {
   padding: 15px 30px;
   font-size: 16px;
 }
-.cta-btn:hover, .cta-btn:focus {
+.cta-btn:hover, .rtb-booking-form button:hover, .cta-btn:focus, .rtb-booking-form button:focus {
   background: #ef7b3a;
   color: #fff;
 }
-.cta-btn:hover:active, .cta-btn:focus:active {
+.cta-btn:hover:active, .rtb-booking-form button:hover:active, .cta-btn:focus:active, .rtb-booking-form button:focus:active {
   background: #ef7b3a;
   color: #fff;
 }
-.cta-btn:active:hover {
+.cta-btn:active:hover, .rtb-booking-form button:active:hover {
   background: #e35d12;
   color: #fff;
 }
 
 @media (max-width: 767px) {
-  .cta-btn {
+  .cta-btn, .rtb-booking-form button {
     padding: 20px 14px;
     font-size: 14px;
   }
@@ -1255,41 +1255,89 @@ section.light-brown-section {
     font-size: 36px;
   }
 }
-.reservation {
+.reservation-form {
   text-align: center;
   padding: 60px 0;
   color: #5e5e5e;
   background: #f6f6f6;
 }
-.reservation--title {
+.reservation-form--title {
   color: #5e5e5e;
   margin: 0 0 25px;
 }
-.reservation--form-panel {
+.reservation-form--panel {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   -ms-border-radius: 0;
   border-radius: 0;
   border-color: #d3d3d3;
   margin-top: 25px;
-  text-align: left;
 }
-.reservation--form-body {
+.reservation-form--body {
   padding: 30px;
 }
 
+.rtb-booking-form {
+  position: relative;
+}
+.rtb-booking-form .reservation legend, .rtb-booking-form .contact legend, .rtb-booking-form .add-message {
+  display: none;
+}
+.rtb-booking-form .reservation, .rtb-booking-form .contact {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  float: left;
+}
+.rtb-booking-form .reservation .rtb-text, .rtb-booking-form .reservation .rtb-select, .rtb-booking-form .contact .rtb-text, .rtb-booking-form .contact .rtb-select {
+  margin-top: 25px;
+}
+.rtb-booking-form .reservation .date, .rtb-booking-form .reservation .name, .rtb-booking-form .contact .date, .rtb-booking-form .contact .name {
+  margin-top: 0;
+}
+.rtb-booking-form .reservation {
+  padding-right: 15px;
+}
+.rtb-booking-form .contact {
+  padding-left: 15px;
+}
+.rtb-booking-form .contact .message {
+  position: absolute;
+  left: 0;
+  top: auto;
+  width: 100%;
+  margin-top: 25px;
+}
+.rtb-booking-form button {
+  margin-top: 175px;
+}
+
 @media (max-width: 767px) {
-  .reservation--form-body {
-    padding: 15px;
+  .rtb-booking-form .reservation, .rtb-booking-form .contact {
+    width: 100%;
+    float: none;
+  }
+  .rtb-booking-form .reservation, .rtb-booking-form .contact {
+    padding: 0;
+  }
+  .rtb-booking-form .reservation .rtb-text, .rtb-booking-form .reservation .rtb-select, .rtb-booking-form .reservation .rtb-textarea, .rtb-booking-form .contact .rtb-text, .rtb-booking-form .contact .rtb-select, .rtb-booking-form .contact .rtb-textarea {
+    margin-top: 15px;
+  }
+  .rtb-booking-form .reservation .date, .rtb-booking-form .contact .date {
+    margin-top: 0;
+  }
+
+  .reservation-form--body {
+    padding: 15px 15px 40px;
   }
 }
-.form-group label {
+.form-group label, .rtb-text label, .rtb-select label, .rtb-textarea label {
   text-transform: uppercase;
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   color: #5e5e5e;
 }
-.form-group input, .form-group textarea {
+.form-group input, .rtb-text input, .rtb-select input, .rtb-textarea input, .form-group textarea, .rtb-text textarea, .rtb-select textarea, .rtb-textarea textarea, .form-group select, .rtb-text select, .rtb-select select, .rtb-textarea select {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -1297,16 +1345,31 @@ section.light-brown-section {
   box-shadow: none;
   border: 2px solid #dfdfdf;
 }
-.form-group input:focus, .form-group textarea:focus {
+.form-group input:focus, .rtb-text input:focus, .rtb-select input:focus, .rtb-textarea input:focus, .form-group textarea:focus, .rtb-text textarea:focus, .rtb-select textarea:focus, .rtb-textarea textarea:focus, .form-group select:focus, .rtb-text select:focus, .rtb-select select:focus, .rtb-textarea select:focus {
   border-color: #ed6b22;
   box-shadow: none;
 }
-.form-group input {
+.form-group input, .rtb-text input, .rtb-select input, .rtb-textarea input {
   height: 50px;
 }
 
-.required {
+.rtb-text input, .rtb-text select, .rtb-text textarea, .rtb-select input, .rtb-select select, .rtb-select textarea, .rtb-textarea input, .rtb-textarea select, .rtb-textarea textarea {
+  padding: 6px 12px;
+  max-width: none !important;
+}
+.rtb-text select, .rtb-select select, .rtb-textarea select {
+  height: 50px;
+  width: 100%;
+}
+.rtb-text label, .rtb-select label, .rtb-textarea label {
+  text-align: left;
+}
+.rtb-text label:after, .rtb-select label:after, .rtb-textarea label:after {
+  content: "*";
   color: #ed6b22;
+}
+.rtb-text.message label:after, .rtb-text.phone label:after, .rtb-select.message label:after, .rtb-select.phone label:after, .rtb-textarea.message label:after, .rtb-textarea.phone label:after {
+  content: "";
 }
 
 @media (max-width: 767px) {

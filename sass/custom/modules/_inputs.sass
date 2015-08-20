@@ -6,7 +6,7 @@
 		color: #5e5e5e
 
 
-	input, textarea
+	input, textarea, select
 		@include border-radius(3px)
 		box-shadow: none
 		border: 2px solid #dfdfdf
@@ -18,5 +18,25 @@
 	input
 		height: 50px
 
-.required
-	color: $main-color
+
+.rtb-text, .rtb-select, .rtb-textarea
+	@extend .form-group
+
+	input, select, textarea
+		padding: 6px 12px
+		max-width: none !important
+
+	select
+		height: 50px
+		width: 100%
+
+	label
+		text-align: left
+
+		&:after
+			content: '*'
+			color: $main-color
+
+	&.message, &.phone
+		label:after
+			content: ''

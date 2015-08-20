@@ -12,7 +12,7 @@
 <?php wp_footer(); ?>
 <footer class="footer">
 	<div class="container">
-		<a href="<?php echo get_permalink( get_page_by_path('barbecue-home-page')); ?>">
+		<a href="<?php echo get_home_url(); ?>">
 			<img class="footer--logo" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" alt="Site logo">
 		</a>
 		<ul class="footer--links">
