@@ -7,11 +7,14 @@
 				<div class="row">
 					<div class="col-lg-8">
 						<div class="intro--content">
-							<h2 class="intro--title">Lorem ipsum dolor sit</h2>
-							<div class="intro--body">
-								<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
-								<p>sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste</p>
-							</div>
+							<?php if (get_field('welcome_title')): ?>
+								<h2 class="intro--title"><?php the_field('welcome_title'); ?></h2>
+							<?php endif; ?>
+							<?php if (get_field('welcome_text')): ?>
+								<div class="intro--body">
+									<?php the_field('welcome_text'); ?>
+								</div>
+							<?php endif; ?>
 						</div>
 					</div>
 					<div class="col-lg-4">
@@ -29,10 +32,11 @@
 								</div>
 								<div class="intro-info--content">
 									<div class="intro-info--title">Lounas</div>
-									<div class="intro-info--body">
-										<span>MA - PE 10 - 15</span>
-										<span>Hinta 8 €</span>
-									</div>
+									<?php if (get_field('lunch_opening_times')): ?>
+										<div class="intro-info--body">
+											<?php the_field('lunch_opening_times'); ?>
+										</div>
+									<?php endif; ?>
 									<div class="intro-info--link">
 										<a href="<?php echo get_permalink( get_page_by_path('barbecue-lunch')); ?>">Lounas <i class="fa fa-arrow-circle-right"></i></a>
 									</div>
@@ -46,11 +50,11 @@
 								</div>
 								<div class="intro-info--content">
 									<div class="intro-info--title">Aukioloajat</div>
-									<div class="intro-info--body">
-										<span>Ma - Pe 10 - 22</span>
-										<span>LA 12 - 24</span>
-										<span>SU 12 - 22</span>
-									</div>
+									<?php if (get_field('restaurant_opening_times')): ?>
+										<div class="intro-info--body">
+											<?php the_field('restaurant_opening_times'); ?>
+										</div>
+									<?php endif; ?>
 									<div class="intro-info--link">
 										<a href="">Yhteystiedot <i class="fa fa-arrow-circle-right"></i></a>
 									</div>

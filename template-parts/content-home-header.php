@@ -1,8 +1,14 @@
 <header class="header">
 	<div class="header--content">
-		<h2 class="header--sub-title">TULE NAUTTIMAAN</h2>
-		<h1 class="header--main-title">Päivittäin vaihtuva lounas</h1>
-		<a href="<?php echo get_permalink( get_page_by_path('barbecue-lunch')); ?>" class="btn btn-default cta-btn">Katso lounaslista</a>
+		<?php if (get_field('header_main_message')): ?>
+			<h2 class="header--sub-title"><?php the_field('header_main_message'); ?></h2>
+		<?php endif; ?>
+		<?php if (get_field('header_secondary_message')): ?>
+			<h1 class="header--main-title"><?php the_field('header_secondary_message'); ?></h1>
+		<?php endif; ?>
+		<?php if (get_field('cta_link') && get_field('cta_text')): ?>
+			<a href="<?php the_field('cta_link'); ?>" class="btn btn-default cta-btn"><?php the_field('cta_text'); ?></a>
+		<?php endif; ?>
 	</div>
 	<i class="header--down-btn fa fa-angle-down"></i>
 </header>
