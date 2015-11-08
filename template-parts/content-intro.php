@@ -17,9 +17,11 @@
 							<?php endif; ?>
 						</div>
 					</div>
-					<div class="col-lg-4">
-						<div class="intro--image"></div>
-					</div>
+					<?php if (get_field('welcome_image')): ?>
+						<div class="col-lg-4">
+							<div class="intro--image" style="background-image: url(<?php echo get_field('welcome_image')['url']; ?>)"></div>
+						</div>
+					<?php endif; ?>
 				</div>
 			</article>
 			</div>
